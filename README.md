@@ -38,7 +38,7 @@ The module provides **eight session key slots**, allowing different keys to be a
 
 Unlike a conventional stored key, the **master key is never permanently stored**. Instead, it is **reconstructed on demand** from three independent components:
 
-1. The microcontroller's unique hardware identifier (**UUID**), stored in the STM32H753's system memory.
+1. The microcontroller's unique hardware identifier (**UUID**), stored in the STM32H753's registers.
 2. A device secret stored in a protected region of the internal Flash memory.
 3. A user-provided password entered during the key recovery process.
 
