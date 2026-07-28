@@ -51,6 +51,14 @@ This architecture significantly strengthens the security of the system. An attac
 
 ## Encryption
 
+![encryption](./7.png)
+
+The qt client devide the file in chunks and send them individually to the module for processing. the user can choose to add padding or not and also e can choose if he can add aad and other params. 
+
+![encryption](./8.png)
+
+
+![encryption](./9.png)
 
 ## Decryption
 
