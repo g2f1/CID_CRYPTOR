@@ -1,2 +1,2 @@
 # CID_CRYPTOR
-![image](./assets/level1_noSudo.png)
+![image](./1.png)
