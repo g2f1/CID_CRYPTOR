@@ -58,7 +58,7 @@ The qt client devide the file in chunks and send them individually to the module
 ![encryption](./8.png)
 
 
-![encryption](./9.png)
+![encryption](./8_1.png)
 
 ## Decryption
 
