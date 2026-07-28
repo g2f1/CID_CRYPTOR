@@ -71,5 +71,13 @@ During encryption, the desktop application streams the file to the module chunk 
 ![Encryption progress](./8_1.png)
 
 The encrypted data is saved as a new file with the same name as the original, using the **`.enc`** extension.
+
 ## Decryption
 
+During decryption, the Qt desktop application reads the encrypted file sequentially. For each encrypted chunk, it extracts the **ciphertext**, **nonce**, and **authentication tag (MAC)** before transmitting them to the STM32H753 cryptographic module.
+
+The module performs the **ChaCha20-Poly1305** decryption and verifies the authentication tag to ensure the integrity and authenticity of the data. If the verification succeeds, the decrypted plaintext is returned to the desktop application and written to the output file. If authentication fails, the operation is aborted, indicating that the encrypted data has been modified, corrupted, or decrypted with an incorrect key.
+
+![Decryption settings](./10.png)
+
+![Decryption progress](./10_1.png)
