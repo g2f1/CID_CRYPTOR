@@ -16,3 +16,8 @@ Before using **CID CRYPTOR**, the user must connect the desktop application to t
 The cryptographic module uses the **True Random Number Generator (TRNG)** integrated into the STM32H753 microcontroller to generate cryptographically secure random data. These random bytes can be used for security-critical operations such as generating **nonces**, **salts**, or seeding a **Pseudo-Random Number Generator (PRNG)**.
 
 ![Random number generation](./3.png)
+
+The module can generate up to 1MiB of random data.
+
+![Random number generation](./4.png)
+
