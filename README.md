@@ -25,9 +25,7 @@ The module can generate up to 1MiB of random data.
 
 ## Key recovery
 
-![key recovery](./4.png)
-
-## Key Management
+![key recovery](./5.png)
 
 The system uses two types of cryptographic keys:
 
@@ -42,9 +40,14 @@ Unlike a conventional stored key, the **master key is never permanently stored**
 2. A device secret stored in a protected region of the internal Flash memory.
 3. A user-provided password entered during the key recovery process.
 
+![key recovery](./6.png)
+
 Only when all three components are available can the master key be reconstructed to decrypt a session key. Once recovered, the session key remains in RAM only for a configurable period defined by the **session timeout** parameter. After the timeout expires, the plaintext session key is securely erased from memory and must be recovered again before it can be used.
 
 This architecture significantly strengthens the security of the system. An attacker attempting to recover a session key would need to obtain all three components required to reconstruct the master key. In practice, this means the attacker must have **physical access to the cryptographic module**, extract the protected device secret, and know the **user's password**. Without all three components, the encrypted session keys remain unusable.
 
+## Encryption
 
+
+## Decryption
 
