@@ -56,8 +56,7 @@ The Qt desktop application encrypts files by dividing them into **chunks**, whic
 
 The user can customize several encryption parameters, including:
 
-- **Chunk size**
-- **Padding** (enabled or disabled)
+- **Padding size** (enabled or disabled)
 - **Additional Authenticated Data (AAD)**
 - Other cryptographic settings
 
