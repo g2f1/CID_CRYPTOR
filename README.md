@@ -19,5 +19,5 @@ The cryptographic module uses the **True Random Number Generator (TRNG)** integr
 
 The module can generate up to 1MiB of random data.
 
-![Random number generation](./4.png)
+![Random number generation](./3_1.png)
 
