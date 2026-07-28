@@ -50,17 +50,27 @@ Only when all three components are available can the master key be reconstructed
 This architecture significantly strengthens the security of the system. An attacker attempting to recover a session key would need to obtain all three components required to reconstruct the master key. In practice, this means the attacker must have **physical access to the cryptographic module**, extract the protected device secret, and know the **user's password**. Without all three components, the encrypted session keys remain unusable.
 
 ## Encryption
+## File Encryption
 
-![encryption](./7.png)
+The Qt desktop application encrypts files by dividing them into **chunks**, which are transmitted sequentially to the STM32H753 cryptographic module for processing. Each chunk is encrypted independently by the module using the selected session key and the **ChaCha20-Poly1305** AEAD algorithm.
 
-![encryption](./9.png)
+The user can customize several encryption parameters, including:
 
-The qt client devide the file in chunks and send them individually to the module for processing. the user can choose to add padding or not and also e can choose if he can add aad and other params. 
+- **Chunk size**
+- **Padding** (enabled or disabled)
+- **Additional Authenticated Data (AAD)**
+- Other cryptographic settings
 
-![encryption](./8.png)
+![Encryption settings](./7.png)
 
-![encryption](./8_1.png)
+![Advanced encryption settings](./9.png)
 
-the results write down to a file with the same name with the .enc extension
+During encryption, the desktop application streams the file to the module chunk by chunk and writes the encrypted output to disk as it is received.
+
+![Encryption process](./8.png)
+
+![Encryption progress](./8_1.png)
+
+The encrypted data is saved as a new file with the same name as the original, using the **`.enc`** extension.
 ## Decryption
 
