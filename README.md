@@ -8,6 +8,10 @@ The cryptographic algorithms are implemented in software using ![Monocypher](htt
 
 By isolating cryptographic processing within the STM32H753, CID_CRYPTOR provides secure key handling while protecting sensitive files. The use of ChaCha20-Poly1305 ensures confidentiality, integrity, and authenticity, allowing any unauthorized modification of an encrypted file to be detected during decryption.
 
+## STM32H753
+![image](.demo.jpeg)
+The STM32H753 is a high-performance 32-bit microcontroller from STMicroelectronics based on the Arm Cortex-M7 core running at up to 480 MHz. It features 2 MB of Flash memory, 1 MB of SRAM, a double-precision floating-point unit (FPU), DSP instructions, and L1 instruction and data caches, making it suitable for computationally intensive embedded applications. The device integrates numerous peripherals, including USB OTG, Ethernet, CAN FD, SPI, I²C, UART, ADCs, DACs, timers, and hardware cryptographic accelerators, enabling the development of secure and high-speed systems. Thanks to its processing power, rich peripheral set, and advanced memory architecture, the STM32H753 is widely used in industrial control, digital signal processing, IoT devices, robotics, and embedded cryptographic applications.
+
 ## Standard user features
 ### Connection 
 Before using **CID CRYPTOR**, the user must connect the desktop application to the cryptographic module. Once connected, the connection can be verified by sending a **Ping** command to ensure that the device is responding correctly. The application also allows the user to retrieve information about the connected module.
